@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-11 09:40:34 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMTswOTozMzo0OSDDllM7MjgwNA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMTswOTo0MDozNCDDllM7MTsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen okudu&#287;unuz kitap say&#305;s&#305;n&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <if expression="sayi &gt; 5">
+                <then>
+                    <output expression="&quot;Bilgi&#231;siniz.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="sayi = 5">
+                <then>
+                    <output expression="&quot;Bilgi&#231; &#231;&#305;ra&#287;&#305;s&#305;n&#305;z.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="sayi &lt; 5">
+                <then>
+                    <output expression="&quot;Acemisiniz&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="sayi = 0">
+                <then>
+                    <output expression="&quot;Cahilsiniz.&quot;" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

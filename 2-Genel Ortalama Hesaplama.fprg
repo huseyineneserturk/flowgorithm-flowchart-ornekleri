@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-10 11:30:53 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMDsxMToyMzo0NSDDllM7Mjc5MQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMDsxMTozMDo1MyDDllM7MTsyODk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sinavnotu1, sinavnotu2, sozluortalama, sinavortalama" type="Integer" array="False" size=""/>
+            <declare name="genelortalama" type="Real" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen 1.S&#305;nav notunuzu giriniz.&quot;" newline="True"/>
+            <input variable="sinavnotu1"/>
+            <output expression="&quot;L&#252;tfen 2.S&#305;nav notunuzu giriniz.&quot;" newline="True"/>
+            <input variable="sinavnotu2"/>
+            <output expression="&quot;L&#252;tfen s&#246;zl&#252; ortalaman&#305;z&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sozluortalama"/>
+            <assign variable="sinavortalama" expression="(sinavnotu1 + sinavnotu2) / 2"/>
+            <assign variable="genelortalama" expression="(sinavnotu1 + sinavnotu2 + sozluortalama) / 3"/>
+            <output expression="&quot;S&#305;nav Ortalaman&#305;z: &quot; &amp; sinavortalama &amp; &quot;Genel Ortalaman&#305;z: &quot; &amp; genelortalama" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

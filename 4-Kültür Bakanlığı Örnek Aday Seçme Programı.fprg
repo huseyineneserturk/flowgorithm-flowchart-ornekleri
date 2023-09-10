@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-11 10:05:57 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMTswOTo1NTozMyDDllM7MjgwMQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMTsxMDowNTo1NyDDllM7MTsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="okunanKitap, yas" type="Integer" array="False" size=""/>
+            <declare name="universiteMezunu, pasaportSahibi" type="String" array="False" size=""/>
+            <output expression="&quot;Merhabalar. K&#252;lt&#252;r Bakanl&#305;&#287;&#305; aday bilgi i&#351;leme sistemine ho&#351;geldiniz. L&#252;tfen &#246;nce ya&#351; bilginizi giriniz.&quot;" newline="True"/>
+            <input variable="yas"/>
+            <if expression="yas &gt;= 40">
+                <then>
+                    <output expression="&quot;Maalesef se&#231;ilmeye hak kazanamad&#305;n&#305;z.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;L&#252;tfen okudu&#287;unuz kitap say&#305;s&#305;n&#305; giriniz.&quot;" newline="True"/>
+                    <input variable="okunanKitap"/>
+                    <if expression="okunanKitap &lt;= 5">
+                        <then>
+                            <output expression="&quot;Maalesef programa kat&#305;lmaya hak kazanamad&#305;n&#305;z. L&#252;tfen daha &#231;ok kitap okuyun :)&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;L&#252;tfen &#252;niversite mezun durumunuzu giriniz. Mezun / Mezun De&#287;il&quot;" newline="True"/>
+                            <input variable="universiteMezunu"/>
+                            <output expression="&quot;L&#252;tfen pasaport sahiplik bilgilerinizi giriniz. Sahibim / De&#287;ilim&quot;" newline="True"/>
+                            <input variable="pasaportSahibi"/>
+                            <if expression="universiteMezunu == &quot;Mezun&quot; &amp;&amp; pasaportSahibi == &quot;Sahibim&quot;">
+                                <then>
+                                    <output expression="&quot;Tebrikler programa se&#231;ilmeye hak kazand&#305;n&#305;z.&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Maalesef ki programa se&#231;ilmeye hak kazanamad&#305;n&#305;z.&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
