@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-13 08:47:08 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMzswODozMTo0NSDDllM7Mjc5OQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMzswODo0NzowOCDDllM7MjsyOTE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, diskriminant, x1, x2" type="Real" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen s&#305;ras&#305;yla a, b ve c de&#287;erlerini giriniz.&quot;" newline="True"/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="diskriminant" expression="b * b - 4 * a * c"/>
+            <if expression="diskriminant &lt; 0">
+                <then>
+                    <output expression="&quot;Ger&#231;el k&#246;k&#252; yoktur.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="diskriminant &gt; 0">
+                        <then>
+                            <assign variable="x1" expression="-b + (diskriminant ^ 1/2) / (2 * a)"/>
+                            <assign variable="x2" expression="-b - (diskriminant ^ 1/2) / (2 * a)"/>
+                            <output expression="&quot;x1: &quot; &amp; x1 &amp; &quot;x2: &quot; &amp; x2" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="diskriminant = 0">
+                                <then>
+                                    <assign variable="x1" expression="-b / (2 * a)"/>
+                                    <output expression="&quot;Bilinmeyen de&#287;eriniz: &quot; &amp; x1" newline="True"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

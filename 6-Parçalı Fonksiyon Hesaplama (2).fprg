@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-12 01:00:14 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMjsxMjo1NjoyNSDDllM7Mjc5OA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xMjswMTowMDoxNCDDllM7MTsyODkx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="x, y" type="Real" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen bir x de&#287;eri giriniz.&quot;" newline="True"/>
+            <input variable="x"/>
+            <if expression="x &gt; 20">
+                <then>
+                    <assign variable="y" expression="x * 10"/>
+                </then>
+                <else>
+                    <if expression="x &gt;= 10 &amp;&amp; x &lt;= 20">
+                        <then>
+                            <assign variable="y" expression="x * 5"/>
+                        </then>
+                        <else>
+                            <if expression="x &lt; 10 &amp;&amp; x &gt;= 5">
+                                <then>
+                                    <assign variable="y" expression="x * 2"/>
+                                </then>
+                                <else>
+                                    <if expression="x &lt; 5">
+                                        <then>
+                                            <assign variable="y" expression="x * 1"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Sonucunuz: &quot; &amp; y" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

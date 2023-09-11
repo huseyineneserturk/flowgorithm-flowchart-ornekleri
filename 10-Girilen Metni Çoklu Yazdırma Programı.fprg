@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-15 02:18:59 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xNTswMjoxNjowMSDDllM7Mjc5MA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xNTswMjoxODo1OSDDllM7MTsyOTEz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="metin" type="String" array="False" size=""/>
+            <declare name="sayac" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen tekrarlanmas&#305;n&#305; istedi&#287;iniz metni giriniz.&quot;" newline="True"/>
+            <input variable="metin"/>
+            <for variable="sayac" start="1" end="10" direction="inc" step="1">
+                <output expression="sayac &amp; &quot;.&quot; &amp; metin" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
