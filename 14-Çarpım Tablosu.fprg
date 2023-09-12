@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-16 06:52:34 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xNjswNjo0ODozOCDDllM7MjgxMA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xNjswNjo1MjozNCDDllM7MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j" type="Integer" array="False" size=""/>
+            <output expression="&quot;1'den 5'e Kadar &#199;arp&#305;m Tablosu: &quot;" newline="True"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <for variable="j" start="1" end="10" direction="inc" step="1">
+                    <output expression="i &amp; &quot;x&quot; &amp; j &amp; &quot;=&quot; &amp; i * j" newline="True"/>
+                </for>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
