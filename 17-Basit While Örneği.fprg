@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-17 10:01:00 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xNzswOTo1NzoxNCDDllM7MjgwOA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xNzsxMDowMTowMCDDllM7MTsyODky"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayac" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="1"/>
+            <while expression="sayac &lt; 10">
+                <output expression="sayac &amp; &quot;. &quot; &amp; &quot;Bne programlama yapaca&#287;&#305;m in&#351;allah.&quot;" newline="True"/>
+                <assign variable="sayac" expression="sayac + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-18 11:13:24 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xODsxMTowODoxMCDDllM7Mjc5NA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xODsxMToxMzoyNCDDllM7MTsyOTAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, toplam" type="Integer" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <while expression="sayi != 0">
+                <assign variable="toplam" expression="toplam + sayi"/>
+                <output expression="&quot;L&#252;tfen bir say&#305; giriniz.&quot;" newline="True"/>
+                <input variable="sayi"/>
+            </while>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz de&#287;erlerin toplam&#305;: &quot; &amp; toplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-19 11:31:17 &#214;&#214;"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTsxMToyNzozNCDDlsOWOzI5MzM="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTsxMTozMToxNyDDlsOWOzE7MzAzNw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <assign variable="sayi" expression="0"/>
+            <while expression="sayi &lt; 100">
+                <if expression="sayi % 3 == 0 || sayi % 5 == 0">
+                    <then>
+                        <output expression="sayi" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="sayi" expression="sayi + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

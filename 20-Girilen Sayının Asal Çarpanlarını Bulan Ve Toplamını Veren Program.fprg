@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-19 05:43:13 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTsxMjozNzo0NiDDllM7MjgwNw=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTswNTo0MzoxMyDDllM7NDsyOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, bolen, toplam, birOncekiBolen" type="Integer" array="False" size=""/>
+            <assign variable="bolen" expression="2"/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="birOncekiBolen" expression="0"/>
+            <output expression="&quot;L&#252;tfen asal &#231;arpanlar&#305;n&#305; bulmak istedi&#287;iniz say&#305;y&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <while expression="sayi &gt; 1">
+                <if expression="sayi % bolen == 0">
+                    <then>
+                        <assign variable="sayi" expression="sayi / bolen"/>
+                        <if expression="bolen != birOncekiBolen">
+                            <then>
+                                <assign variable="toplam" expression="toplam + bolen"/>
+                                <output expression="bolen" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                        <assign variable="birOncekiBolen" expression="bolen"/>
+                    </then>
+                    <else>
+                        <assign variable="bolen" expression="bolen + 1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz say&#305;n&#305;n asal &#231;arpanlar&#305;n&#305;n toplam&#305;: &quot; &amp; toplam" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
