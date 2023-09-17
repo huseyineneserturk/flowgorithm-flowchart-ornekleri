@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-19 04:11:42 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTswMzo1MTo1MSDDllM7Mjc5OQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTswNDoxMTo0MiDDllM7MTsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kisi, yasOrtalama, sirketKitleEndeksi, sirketDegerEndeksi, yas, yasToplam" type="Real" array="False" size=""/>
+            <assign variable="yasToplam" expression="0"/>
+            <for variable="kisi" start="1" end="10" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen i&#351;yerindeki &quot; &amp; kisi &amp; &quot;.&quot; &amp; &quot;ki&#351;inin ya&#351; bilgilerini giriniz.&quot;" newline="True"/>
+                <input variable="yas"/>
+                <assign variable="yasToplam" expression="yasToplam + yas"/>
+            </for>
+            <assign variable="yasOrtalama" expression="yasToplam / 10"/>
+            <output expression="&quot;&#350;irketinizde &#231;al&#305;&#351;an i&#351;&#231;ilerin ya&#351;lar&#305; toplam&#305;: &quot; &amp; yasToplam" newline="True"/>
+            <output expression="&quot;&#350;irketinizde &#231;al&#305;&#351;an &#231;al&#305;&#351;anlar&#305;n ya&#351; ortalamas&#305;: &quot; &amp; yasOrtalama" newline="True"/>
+            <if expression="yasOrtalama &lt; 20">
+                <then>
+                    <assign variable="sirketKitleEndeksi" expression="100"/>
+                </then>
+                <else>
+                    <if expression="yasOrtalama &gt;= 20 &amp;&amp; yasOrtalama &lt; 25">
+                        <then>
+                            <assign variable="sirketKitleEndeksi" expression="75"/>
+                        </then>
+                        <else>
+                            <if expression="yasOrtalama &gt;= 25 &amp;&amp; yasOrtalama &lt; 30">
+                                <then>
+                                    <assign variable="sirketKitleEndeksi" expression="50"/>
+                                </then>
+                                <else>
+                                    <if expression="yasOrtalama &gt;= 30">
+                                        <then>
+                                            <assign variable="sirketKitleEndeksi" expression="25"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;&#350;irket Kitle Endeksiniz: &quot; &amp; sirketKitleEndeksi" newline="True"/>
+                    <if expression="sirketKitleEndeksi == 75 &amp;&amp; sirketKitleEndeksi == 100">
+                        <then>
+                            <assign variable="sirketDegerEndeksi" expression="100"/>
+                        </then>
+                        <else>
+                            <assign variable="sirketDegerEndeksi" expression="50"/>
+                        </else>
+                    </if>
+                    <output expression="&quot;&#350;irket De&#287;er Endeksiniz: &quot; &amp; sirketDegerEndeksi" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

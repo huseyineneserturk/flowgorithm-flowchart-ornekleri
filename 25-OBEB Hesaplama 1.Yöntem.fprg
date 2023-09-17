@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-24 04:17:37 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yNDswNDoxMzoxNSDDllM7Mjc5NA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yNDswNDoxNzozNyDDllM7MTsyOTEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi1, sayi2" type="Integer" array="False" size=""/>
+            <output expression="&quot;l&#252;tfen OBEB hesaplanmas&#305;n&#305; istedi&#287;iniz 1. say&#305;y&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;L&#252;tfen OBEB hesaplanmas&#305;n&#305; istedi&#287;iniz 2. say&#305;y&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <while expression="sayi1 &lt;&gt; sayi2">
+                <if expression="sayi1 &gt; sayi2">
+                    <then>
+                        <assign variable="sayi1" expression="sayi1 - sayi2"/>
+                    </then>
+                    <else>
+                        <assign variable="sayi2" expression="sayi2 - sayi1"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;OBEB: &quot; &amp; sayi2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-24 12:38:02 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yNDsxMjoyNjowNSDDllM7Mjc5Ng=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yNDsxMjozODowMiDDllM7MTsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, kalan" type="Integer" array="False" size=""/>
+            <declare name="ikiSayiTabani" type="String" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen iki taban&#305;nda hesaplanmas&#305;n&#305; istedi&#287;ini zde&#287;eri giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="ikiSayiTabani" expression="&quot;&quot;"/>
+            <while expression="sayi &gt; 1">
+                <assign variable="kalan" expression="sayi % 2"/>
+                <assign variable="sayi" expression="int(sayi / 2)"/>
+                <assign variable="ikiSayiTabani" expression="kalan &amp; ikiSayiTabani"/>
+            </while>
+            <assign variable="ikiSayiTabani" expression="&quot;1&quot; &amp; ikiSayiTabani"/>
+            <output expression="ikiSayiTabani" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

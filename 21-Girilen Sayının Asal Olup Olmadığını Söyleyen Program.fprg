@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-19 01:17:26 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTswMToxMzo0MCDDllM7Mjc5Mw=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0xOTswMToxNzoyNiDDllM7MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, asalDurumKontrol, sayac" type="Integer" array="False" size=""/>
+            <assign variable="asalDurumKontrol" expression="0"/>
+            <output expression="&quot;L&#252;tfen asall&#305;k durumunu &#246;&#287;renmek istedi&#287;iniz say&#305;y&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi"/>
+            <for variable="sayac" start="2" end="sayi/2" direction="inc" step="1">
+                <if expression="sayi % sayac == 0">
+                    <then>
+                        <assign variable="asalDurumKontrol" expression="1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="asalDurumKontrol == 1">
+                <then>
+                    <output expression="&quot;Girmi&#351; oldu&#287;unuz say&#305; asal de&#287;ildir.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girmi&#351; oldu&#287;unuz say&#305; asald&#305;r.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
