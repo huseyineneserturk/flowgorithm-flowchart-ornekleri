@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-28 06:59:33 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yODswNjo1MzozNCDDllM7MjgwNQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yODswNjo1OTozMyDDllM7MjsyOTE5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="enBuyuk, i" type="Integer" array="False" size=""/>
+            <declare name="sayilar" type="Integer" array="True" size="5"/>
+            <assign variable="sayilar[0]" expression="34"/>
+            <assign variable="sayilar[1]" expression="35"/>
+            <assign variable="sayilar[2]" expression="67"/>
+            <assign variable="sayilar[3]" expression="78"/>
+            <assign variable="sayilar[4]" expression="56"/>
+            <assign variable="enBuyuk" expression="sayilar[0]"/>
+            <for variable="i" start="1" end="4" direction="inc" step="1">
+                <if expression="sayilar[i] &gt; enBuyuk">
+                    <then>
+                        <assign variable="enBuyuk" expression="sayilar[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="&quot;Dizideki en b&#252;y&#252;k de&#287;er: &quot; &amp; enBuyuk" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

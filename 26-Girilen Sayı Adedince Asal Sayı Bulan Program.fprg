@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-08-24 04:49:04 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yNDswNDozMDo0MSDDllM7Mjc5Mg=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yNDswNDo0OTowNCDDllM7MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="istenenAsalSayi, bulunanAsalSayi, kontrolAsalSayi, asalKontrol, sayac" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen ka&#231; adet asal say&#305; g&#246;rmek istedi&#287;inizi yaz&#305;n&#305;z.&quot;" newline="True"/>
+            <input variable="istenenAsalSayi"/>
+            <assign variable="kontrolAsalSayi" expression="2"/>
+            <assign variable="bulunanAsalSayi" expression="0"/>
+            <while expression="istenenAsalSayi &gt; bulunanAsalSayi">
+                <assign variable="asalKontrol" expression="0"/>
+                <for variable="sayac" start="2" end="kontrolAsalSayi / 2" direction="inc" step="1">
+                    <if expression="kontrolAsalSayi % sayac == 0">
+                        <then>
+                            <assign variable="asalKontrol" expression="1"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+                <if expression="asalKontrol == 0">
+                    <then>
+                        <assign variable="bulunanAsalSayi" expression="bulunanAsalSayi + 1"/>
+                        <output expression="&quot;Girdi&#287;iniz Say&#305; Adedince Asal Say&#305;lar&#305;n&#305;z: &quot; &amp; kontrolAsalSayi" newline="True"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="kontrolAsalSayi" expression="kontrolAsalSayi + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
