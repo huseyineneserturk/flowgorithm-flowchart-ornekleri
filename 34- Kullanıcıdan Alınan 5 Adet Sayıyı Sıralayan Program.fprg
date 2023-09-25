@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-02 02:27:41 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMjswMjoxMDo0OCDDllM7Mjc5Mg=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMjswMjoyNzo0MSDDllM7MjsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, j, k, l, gecici, sayi" type="Integer" array="False" size=""/>
+            <declare name="sayilar" type="Integer" array="True" size="5"/>
+            <for variable="l" start="0" end="4" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen &quot; &amp; l + 1 &amp; &quot;.&quot; &amp; &quot; say&#305;y&#305; giriniz: &quot;" newline="True"/>
+                <input variable="sayilar[l]"/>
+            </for>
+            <for variable="i" start="0" end="3" direction="inc" step="1">
+                <for variable="j" start="0" end="3" direction="inc" step="1">
+                    <if expression="sayilar[j] &gt; sayilar[j + 1]">
+                        <then>
+                            <assign variable="gecici" expression="sayilar[j]"/>
+                            <assign variable="sayilar[j]" expression="sayilar[j + 1]"/>
+                            <assign variable="sayilar[j + 1]" expression="gecici"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <for variable="k" start="0" end="4" direction="inc" step="1">
+                <output expression="k + 1 &amp; &quot;.&quot; &amp; &quot;Say&#305;: &quot; &amp; sayilar[k]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

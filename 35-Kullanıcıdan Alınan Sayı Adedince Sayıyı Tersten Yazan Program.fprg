@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-03 03:18:20 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMzswMjo0OTowOSDDllM7MjgwMg=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMzswMzoxODoyMCDDllM7MTsyOTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="istenenEleman, i, j, k, l, temp" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen tersten hesaplanmas&#305;n&#305; istedi&#287;iniz say&#305; adedini giriniz.&quot;" newline="True"/>
+            <input variable="istenenEleman"/>
+            <declare name="elemanlar" type="Integer" array="True" size="istenenEleman"/>
+            <for variable="i" start="0" end="istenenEleman - 1" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen &quot; &amp; i + 1 &amp; &quot;.&quot; &amp; &quot; Eleman&#305; giriniz: &quot;" newline="True"/>
+                <input variable="elemanlar[i]"/>
+            </for>
+            <for variable="j" start="0" end="istenenEleman - 1" direction="inc" step="1">
+                <output expression="&quot;Girmi&#351; Oldu&#287;unuz &quot; &amp; j + 1 &amp; &quot;.&quot; &amp; &quot;Say&#305;: &quot; &amp; elemanlar[j]" newline="True"/>
+            </for>
+            <for variable="k" start="0" end="istenenEleman / 2 - 1" direction="inc" step="1">
+                <assign variable="temp" expression="elemanlar[k]"/>
+                <assign variable="elemanlar[k]" expression="elemanlar[istenenEleman - k - 1]"/>
+                <assign variable="elemanlar[istenenEleman - k - 1]" expression="temp"/>
+            </for>
+            <for variable="l" start="0" end="istenenEleman - 1" direction="inc" step="1">
+                <output expression="l + 1 &amp; &quot;.&quot; &amp; &quot; Say&#305;: &quot; &amp; elemanlar[l]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

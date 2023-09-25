@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-02 01:47:18 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOC0yODswNzowNjo0OSDDllM7MjgxMA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMjswMTo0NzoxOCDDllM7MjsyOTA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="notToplam, i" type="Integer" array="False" size=""/>
+            <declare name="notOrtalama" type="Real" array="False" size=""/>
+            <declare name="notlar" type="Integer" array="True" size="5"/>
+            <assign variable="notToplam" expression="0"/>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <output expression="i + 1 &amp; &quot;. Notunuzu giriniz: &quot;" newline="True"/>
+                <input variable="notlar[i]"/>
+            </for>
+            <for variable="i" start="0" end="4" direction="inc" step="1">
+                <assign variable="notToplam" expression="notToplam + notlar[i]"/>
+            </for>
+            <assign variable="notOrtalama" expression="notToplam / 5"/>
+            <output expression="&quot;Girmi&#351; Oldu&#287;unuz 5 Adet Notun Ortalamas&#305;: &quot; &amp; notOrtalama" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
