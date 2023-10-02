@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-03 03:47:32 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMzswMzozMjoxMyDDllM7Mjc5MA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wMzswMzo0NzozMiDDllM7MTsyOTA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, konum, sayi, istenenEleman" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen ka&#231; adet say&#305; girmek istedi&#287;inizi yaz&#305;n&#305;z: &quot;" newline="True"/>
+            <input variable="istenenEleman"/>
+            <declare name="elemanlar" type="Integer" array="True" size="100"/>
+            <for variable="i" start="0" end="istenenEleman - 1" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen &quot; &amp; i + 1 &amp; &quot;.&quot; &amp; &quot; Eleman&#305; giriniz.&quot;" newline="True"/>
+                <input variable="elemanlar[i]"/>
+            </for>
+            <output expression="&quot;L&#252;tfen de&#287;erini de&#287;i&#351;itrmek istedi&#287;iniz say&#305; de&#287;erinin kodunu yaz&#305;n&#305;z: &quot;" newline="True"/>
+            <input variable="konum"/>
+            <output expression="&quot;L&#252;tfen de&#287;i&#351;tirilen de&#287;er yerine eklemek istedi&#287;iniz say&#305;y&#305; giriniz: &quot;" newline="True"/>
+            <input variable="sayi"/>
+            <for variable="i" start="istenenEleman" end="konum - 1" direction="dec" step="1">
+                <assign variable="elemanlar[i]" expression="elemanlar[i - 1]"/>
+            </for>
+            <assign variable="elemanlar[konum - 1]" expression="sayi"/>
+            <for variable="i" start="0" end="istenenEleman" direction="inc" step="1">
+                <output expression="i + 1 &amp; &quot;.&quot; &amp; &quot; Say&#305;:&quot; &amp; elemanlar[i]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

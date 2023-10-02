@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-06 03:02:14 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wNjswMjo0NzoyMCDDllM7Mjc5Ng=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wNjswMzowMjoxNCDDllM7MjsyOTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi1, sayi2" type="Integer" array="False" size=""/>
+            <declare name="toplam" type="Real" array="False" size=""/>
+            <output expression="&quot;1. Say&#305;y&#305; giriniz: &quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;2.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <assign variable="toplam" expression="fakt(sayi1) / fakt(sayi2) * fakt(sayi1 - sayi2)"/>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz de&#287;erlerin faktoriyel hesaplamas&#305;: &quot; &amp; toplam" newline="True"/>
+        </body>
+    </function>
+    <function name="fakt" type="Integer" variable="fakthesap">
+        <parameters>
+            <parameter name="say1" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="fakthesap, i" type="Integer" array="False" size=""/>
+            <assign variable="fakthesap" expression="1"/>
+            <for variable="i" start="1" end="say1" direction="inc" step="1">
+                <assign variable="fakthesap" expression="fakthesap * i"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

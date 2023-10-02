@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-06 03:01:33 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wNjswMjo1MzozOCDDllM7MjgwMg=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wNjswMzowMTozMyDDllM7MTsyODk5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="katbirsay1, katbirsay2, katikisay1, katikisay2, katucsay1, katucsay2, toplam" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen 1.Toplam B&#246;l&#252;m&#252; 1.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="katbirsay1"/>
+            <output expression="&quot;L&#252;tfen 1.Toplam B&#246;l&#252;m&#252; 2.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="katbirsay2"/>
+            <output expression="&quot;L&#252;tfen 2.Toplam B&#246;l&#252;m&#252; 1.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="katikisay1"/>
+            <output expression="&quot;L&#252;tfen 2.Toplam B&#246;l&#252;m&#252; 2.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="katikisay2"/>
+            <output expression="&quot;L&#252;tfen 3.Toplam B&#246;l&#252;m&#252; 1.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="katucsay1"/>
+            <output expression="&quot;L&#252;tfen 3.Toplam B&#246;l&#252;m&#252; 2.Say&#305;y&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="katucsay2"/>
+            <assign variable="toplam" expression="fonktoplam(katbirsay1, katbirsay2) + fonktoplam(katikisay1, katikisay2) + fonktoplam(katucsay1, katucsay2)"/>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz parametrelerden 3'l&#252; toplama blo&#287;una g&#246;re toplam halleri: &quot; &amp; toplam" newline="True"/>
+        </body>
+    </function>
+    <function name="fonktoplam" type="Integer" variable="toplama">
+        <parameters>
+            <parameter name="say1" type="Integer" array="False"/>
+            <parameter name="say2" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i, toplama" type="Integer" array="False" size=""/>
+            <assign variable="toplama" expression="0"/>
+            <for variable="i" start="say1" end="say2" direction="inc" step="1">
+                <assign variable="toplama" expression="toplama + i"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

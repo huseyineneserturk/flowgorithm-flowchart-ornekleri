@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-08 04:08:33 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wODswNDowNjowOCDDllM7MjgwMQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wODswNDowODozMyDDllM7MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ters, str" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="str" expression="&quot;Bili&#351;im D&#252;nyas&#305;&quot;"/>
+            <assign variable="ters" expression="&quot;&quot;"/>
+            <for variable="i" start="0" end="Len(str) - 1" direction="inc" step="1">
+                <assign variable="ters" expression="Char(str, i) &amp; ters"/>
+            </for>
+            <output expression="ters" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

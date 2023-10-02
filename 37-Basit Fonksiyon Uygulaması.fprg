@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-06 02:20:07 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wNjswMjoxNToxMCDDllM7Mjc5MA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wNjswMjoyMDowNyDDllM7MTsyOTAw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi1, sayi2" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen 1.Say&#305;y&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;L&#252;tfen 2.Say&#305;y&#305; giriniz.&quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <call expression="topla(sayi1, sayi2)"/>
+            <call expression="carp(sayi1, sayi2)"/>
+        </body>
+    </function>
+    <function name="carp" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="carp" type="Integer" array="False" size=""/>
+            <assign variable="carp" expression="a * b"/>
+            <output expression="carp" newline="True"/>
+        </body>
+    </function>
+    <function name="topla" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="Integer" array="False"/>
+            <parameter name="b" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="topla" type="Integer" array="False" size=""/>
+            <assign variable="topla" expression="a + b"/>
+            <output expression="&quot;1.Say&#305;: &quot; &amp; a" newline="True"/>
+            <output expression="&quot;2.Say&#305;: &quot; &amp; b" newline="True"/>
+            <output expression="topla" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
