@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-10 01:58:39 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMDswMTo0NTo0MyDDllM7Mjc5Mw=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMDswMTo1ODozOSDDllM7MjsyOTEx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="harfler" type="String" array="True" size="26"/>
+            <declare name="i, uzunluk" type="Integer" array="False" size=""/>
+            <declare name="kelime" type="String" array="False" size=""/>
+            <assign variable="kelime" expression="&quot;&quot;"/>
+            <output expression="&quot;Ne kadar uzunlukta &#351;ifre olu&#351;turmak istersiniz: &quot;" newline="True"/>
+            <input variable="uzunluk"/>
+            <for variable="i" start="0" end="25" direction="inc" step="1">
+                <assign variable="harfler[i]" expression="ToChar(i + 65)"/>
+            </for>
+            <for variable="i" start="0" end="uzunluk - 1" direction="inc" step="1">
+                <assign variable="kelime" expression="kelime &amp; harfler[Random(26)]"/>
+            </for>
+            <for variable="i" start="0" end="uzunluk - 1" direction="inc" step="1">
+                <output expression="&quot;Rastgele &#351;ifrenizin Tekil &quot; &amp; i+1 &amp; &quot;. Terimi: &quot; &amp; Char(kelime, i)" newline="True"/>
+            </for>
+            <output expression="&quot;Terimin Uzunlu&#287;u: &quot; &amp; Len(kelime)" newline="True"/>
+            <output expression="Len(kelime) &amp; &quot; Uzunluklu &#351;ifreniz: &quot; &amp; kelime" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

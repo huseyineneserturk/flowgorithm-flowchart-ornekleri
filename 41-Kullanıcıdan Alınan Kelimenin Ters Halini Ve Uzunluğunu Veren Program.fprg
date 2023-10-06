@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-08 04:21:41 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wODswNDoxMTo0OSDDllM7MjgwMg=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0wODswNDoyMTo0MSDDllM7MjsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="str, ters" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="ters" expression="&quot;&quot;"/>
+            <output expression="&quot;L&#252;tfen tersten yazd&#305;rmak istedi&#287;iniz kelimeyi giriniz.&quot;" newline="True"/>
+            <input variable="str"/>
+            <for variable="i" start="0" end="Len(str) - 1" direction="inc" step="1">
+                <assign variable="ters" expression="Char(str, i) &amp; ters"/>
+            </for>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz kelimenin tersten yaz&#305;lm&#305;&#351; hali: &quot; &amp; ters" newline="True"/>
+            <if expression="Len(str) &gt; 5">
+                <then>
+                    <for variable="i" start="0" end="Len(Str) - 1" direction="inc" step="1">
+                        <output expression="&quot;Girmi&#351; oldu&#287;unuz string de&#287;erinin Char hali: &quot; &amp; Char(str, i)" newline="True"/>
+                    </for>
+                    <output expression="&quot;Girmi&#351; oldu&#287;unuz string de&#287;erinin uzunlu&#287;u: &quot; &amp; Len(str)" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girmi&#351; oldu&#287;unuz string de&#287;erin uzunlu&#287;u: &quot; &amp; Len(str)" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

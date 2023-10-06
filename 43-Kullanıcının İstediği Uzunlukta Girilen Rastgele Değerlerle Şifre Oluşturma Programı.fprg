@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-10 01:36:47 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMDswMToyODozOSDDllM7Mjc5OQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMDswMTozNjo0NyDDllM7MjsyOTA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="i, karakter" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen ka&#231; karakterli bir &#351;ifre olu&#351;turmak istedi&#287;inizi yaz&#305;n&#305;z: &quot;" newline="True"/>
+            <input variable="karakter"/>
+            <declare name="sifre" type="String" array="True" size="karakter"/>
+            <declare name="prototif" type="String" array="False" size=""/>
+            <assign variable="prototif" expression="&quot;&quot;"/>
+            <for variable="i" start="0" end="karakter - 1" direction="inc" step="1">
+                <output expression="&quot;L&#252;tfen &#350;ifrenizde Bulunmas&#305;n&#305; &#304;stedi&#287;iniz &quot; &amp; i + 1 &amp; &quot; . De&#287;eri Giriniz: &quot;" newline="True"/>
+                <input variable="sifre[i]"/>
+            </for>
+            <for variable="i" start="0" end="karakter - 1" direction="inc" step="1">
+                <assign variable="prototif" expression="prototif &amp; sifre[Random(karakter)]"/>
+            </for>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz de&#287;erlerle olu&#351;turulan rastgele &#351;ifreniz: &quot; &amp; prototif" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

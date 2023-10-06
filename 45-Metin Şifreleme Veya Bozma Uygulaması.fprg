@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-10 08:24:22 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMDswNzo1NjozMiDDllM7Mjc5OQ=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMDswODoyNDoyMiDDllM7MTsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="deger, a, b" type="String" array="False" size=""/>
+            <assign variable="a" expression="&quot;&quot;"/>
+            <output expression="&quot;L&#252;tfen metinden &#351;ifreleme istiyorsan&#305;z ( a ) &#351;ifrelenmi&#351;ten sadeye istiyorsan&#305;z ( b ) bas&#305;n&#305;z.&quot;" newline="True"/>
+            <input variable="deger"/>
+            <if expression="deger = &quot;a&quot;">
+                <then>
+                    <call expression="a(a)"/>
+                </then>
+                <else>
+                    <call expression="b(a)"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="a" type="None" variable="">
+        <parameters>
+            <parameter name="a" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="kelime, sifre, sample" type="String" array="False" size=""/>
+            <declare name="i, ascii" type="Integer" array="False" size=""/>
+            <assign variable="sifre" expression="&quot;&quot;"/>
+            <output expression="&quot;L&#252;tfen &#351;ifrelenmesini istedi&#287;iniz metni giriniz: &quot;" newline="True"/>
+            <input variable="kelime"/>
+            <for variable="i" start="0" end="Len(kelime) - 1" direction="inc" step="1">
+                <assign variable="sample" expression="Char(kelime, i)"/>
+                <assign variable="ascii" expression="ToCode(sample)"/>
+                <assign variable="ascii" expression="ascii + 5"/>
+                <assign variable="sifre" expression="sifre &amp; ToChar(ascii)"/>
+            </for>
+            <output expression="&quot;Girmi&#351; oldu&#287;unuz kelimenin &#351;ifrelenmi&#351; hali: &quot; &amp; sifre" newline="True"/>
+        </body>
+    </function>
+    <function name="b" type="None" variable="">
+        <parameters>
+            <parameter name="b" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="sifrelenmis, sample, kelime" type="String" array="False" size=""/>
+            <declare name="i, ascii" type="Integer" array="False" size=""/>
+            <assign variable="kelime" expression="&quot;&quot;"/>
+            <output expression="&quot;L&#252;tfen &#351;ifrelenmi&#351; ifadeyi giriniz: &quot;" newline="True"/>
+            <input variable="sifrelenmis"/>
+            <for variable="i" start="0" end="Len(sifrelenmis) - 1" direction="inc" step="1">
+                <assign variable="sample" expression="Char(sifrelenmis, i)"/>
+                <assign variable="ascii" expression="ToCode(sample)"/>
+                <assign variable="ascii" expression="ascii - 5"/>
+                <assign variable="kelime" expression="kelime &amp; ToChar(ascii)"/>
+            </for>
+            <output expression="&quot;&#350;ifrelenmi&#351;ten sade haline d&#246;nd&#252;r&#252;lm&#252;&#351; &#351;ifreniz: &quot; &amp; kelime" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

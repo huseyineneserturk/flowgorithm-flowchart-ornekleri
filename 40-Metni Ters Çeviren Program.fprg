@@ -13,7 +13,7 @@
         <body>
             <declare name="ters, str" type="String" array="False" size=""/>
             <declare name="i" type="Integer" array="False" size=""/>
-            <assign variable="str" expression="&quot;Bili&#351;im D&#252;nyas&#305;&quot;"/>
+            <assign variable="str" expression="&quot;Hello World;&quot;"/>
             <assign variable="ters" expression="&quot;&quot;"/>
             <for variable="i" start="0" end="Len(str) - 1" direction="inc" step="1">
                 <assign variable="ters" expression="Char(str, i) &amp; ters"/>
