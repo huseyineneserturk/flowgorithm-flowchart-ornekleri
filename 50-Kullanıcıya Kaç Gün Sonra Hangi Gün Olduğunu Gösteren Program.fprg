@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-15 06:04:37 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xNTswNTozNDoxMCDDllM7Mjc5NA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xNTswNjowNDozNyDDllM7MTsyOTA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="kacGun, i, bugunIndisNo, ileriIndisNo" type="Integer" array="False" size=""/>
+            <declare name="gunler" type="String" array="True" size="7"/>
+            <declare name="bugun" type="String" array="False" size=""/>
+            <assign variable="gunler[0]" expression="&quot;Pazartesi&quot;"/>
+            <assign variable="gunler[1]" expression="&quot;Sal&#305;&quot;"/>
+            <assign variable="gunler[2]" expression="&quot;&#199;ar&#351;amba&quot;"/>
+            <assign variable="gunler[3]" expression="&quot;Per&#351;embe&quot;"/>
+            <assign variable="gunler[4]" expression="&quot;Cuma&quot;"/>
+            <assign variable="gunler[5]" expression="&quot;Cumartesi&quot;"/>
+            <assign variable="gunler[6]" expression="&quot;Pazar&quot;"/>
+            <output expression="&quot;L&#252;tfen bug&#252;nki g&#252;n&#252; giriniz: &quot;" newline="True"/>
+            <input variable="bugun"/>
+            <output expression="&quot;Ka&#231; g&#252;n sonra hangi g&#252;n&#252;n geldi&#287;ini &#246;&#287;renmek istersiniz: &quot;" newline="True"/>
+            <input variable="kacGun"/>
+            <for variable="i" start="0" end="6" direction="inc" step="1">
+                <if expression="gunler[i] == bugun">
+                    <then>
+                        <assign variable="bugunIndisNo" expression="i"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <assign variable="ileriIndisNo" expression="bugunIndisNo + kacGun"/>
+            <assign variable="ileriIndisNo" expression="ileriIndisNo % 7"/>
+            <output expression="gunler[ileriIndisNo]" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

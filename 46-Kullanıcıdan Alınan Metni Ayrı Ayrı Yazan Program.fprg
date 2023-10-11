@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-12 10:29:43 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMjsxMDoxNzozOCDDllM7Mjc5OA=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMjsxMDoyOTo0MyDDllM7MTsyOTA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cumle, kelime" type="String" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="kelime" expression="&quot;&quot;"/>
+            <output expression="&quot;L&#252;tfen ayr&#305; ayr&#305; yaz&#305;lmas&#305;n&#305; istedi&#287;iniz c&#252;mleyi yaz&#305;n&#305;z: &quot;" newline="True"/>
+            <input variable="cumle"/>
+            <for variable="i" start="0" end="Len(cumle) - 1" direction="inc" step="1">
+                <if expression="Char(cumle, i) != &quot; &quot;">
+                    <then>
+                        <assign variable="kelime" expression="kelime &amp; Char(cumle, i)"/>
+                        <if expression="Len(cumle) - 1 == i">
+                            <then>
+                                <output expression="&quot;Girmi&#351; oldu&#287;unuz C&#252;mlenin ayr&#305; yaz&#305;lm&#305;&#351; hali: &quot; &amp; kelime" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </then>
+                    <else>
+                        <output expression="&quot;Girmi&#351; oldu&#287;unuz C&#252;mlenin ayr&#305; yaz&#305;lm&#305;&#351; hali: &quot; &amp; kelime" newline="True"/>
+                        <assign variable="kelime" expression="&quot;&quot;"/>
+                    </else>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

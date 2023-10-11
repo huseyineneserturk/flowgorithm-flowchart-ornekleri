@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-12 11:14:04 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMjsxMTowODo1NCDDllM7Mjc5Nw=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xMjsxMToxNDowNCDDllM7MTsyODk3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz: &quot;" newline="True"/>
+            <input variable="sayi"/>
+            <if expression="sayi % 5 == 0">
+                <then>
+                    <output expression="&quot;Say&#305;n&#305;z 5'e tam olarak b&#246;l&#252;nmektedir.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Maalesef say&#305;n&#305;z 5'e tam olarak b&#246;l&#252;nememektedir.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
