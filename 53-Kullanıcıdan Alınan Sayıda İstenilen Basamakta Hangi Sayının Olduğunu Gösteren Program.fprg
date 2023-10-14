@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 05:02:38 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0xODswOTowMToyMCDDllM7Mjc5Ng=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0yMDswNTowMjozOCDDllM7MjsyOTA0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, gecici, kalan, cikarma, kalan1, kalan2, basamak" type="Integer" array="False" size=""/>
+            <output expression="&quot;L&#252;tfen bir say&#305; giriniz: &quot;" newline="True"/>
+            <input variable="sayi"/>
+            <output expression="&quot;Bu say&#305;n&#305;n ka&#231;&#305;nc&#305; basama&#287;&#305;ndaki rakam&#305; bulmak istersiniz?&quot;" newline="True"/>
+            <input variable="basamak"/>
+            <assign variable="kalan" expression="sayi % 10^(basamak - 1)"/>
+            <assign variable="cikarma" expression="sayi - kalan"/>
+            <assign variable="kalan1" expression="cikarma / 10^(basamak - 1)"/>
+            <assign variable="kalan2" expression="kalan1 % 10"/>
+            <output expression="&quot;&#304;stemi&#351; oldu&#287;unuz basamaktaki say&#305;: &quot; &amp; kalan2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

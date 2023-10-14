@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="husey"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-20 05:16:30 &#214;S"/>
+        <attribute name="created" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0yMDswNTowMzowOCDDllM7Mjc5Mw=="/>
+        <attribute name="edited" value="aHVzZXk7SMWhU0VZSU47MjAyMy0wOS0yMDswNToxNjozMCDDllM7MjsyOTAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi, i, toplam, basamak" type="Integer" array="False" size=""/>
+            <declare name="str" type="String" array="False" size=""/>
+            <assign variable="str" expression="&quot;&quot;"/>
+            <assign variable="toplam" expression="0"/>
+            <output expression="&quot;L&#252;tfen Armstrong Say&#305;s&#305; kontrol&#252; yapaca&#287;&#305;n&#305;z say&#305;y&#305; giriniz: &quot;" newline="True"/>
+            <input variable="sayi"/>
+            <assign variable="str" expression="ToString(sayi)"/>
+            <for variable="i" start="0" end="Len(str) - 1" direction="inc" step="1">
+                <assign variable="basamak" expression="ToInteger(Char(str, i))"/>
+                <assign variable="toplam" expression="toplam + (basamak ^ Len(str))"/>
+            </for>
+            <output expression="&quot;Armstrong toplam de&#287;eri: &quot; &amp; toplam" newline="True"/>
+            <if expression="toplam == sayi">
+                <then>
+                    <output expression="&quot;Girmi&#351; oldu&#287;unuz say&#305; bir Armstrong say&#305;s&#305;d&#305;r.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Girmi&#351; oldu&#287;unuz say&#305; bir Armstrong Say&#305;s&#305; de&#287;ildir.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
